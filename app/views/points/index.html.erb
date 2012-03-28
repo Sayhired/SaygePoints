@@ -1,0 +1,7 @@
+<div id="points-list">
+  <% if @point_deltas.any? %>
+    <%= render @point_deltas %>
+  <% else %>
+    <p class="info">No one has any points yet.</p>
+  <% end %>
+</div>
