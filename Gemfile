@@ -33,6 +33,7 @@ gem 'jquery-rails'
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'ZenTest', '4.5.0'
   gem 'rspec-rails'
   gem 'spork'
   gem 'autotest', '4.4.6'
