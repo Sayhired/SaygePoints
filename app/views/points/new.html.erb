@@ -1,6 +1,8 @@
 <%= form_for(@point_delta, :url => points_path) do |f| %>
-  <%= f.number_field :amount %> Points to
-  <%= select :point_delta, :to_user_id, User.all.collect {
-    |u| [u.email,u.id] } %> for
+  <%= f.number_field :amount %>
+  <%= text_field_tag "point_type" %> Points to
+  <%= text_field_tag "to_user" %> for
   <%= f.text_field :reason %>
+  
+  <%= f.submit "Thus sayeth the sayge!" %>
 <% end %>

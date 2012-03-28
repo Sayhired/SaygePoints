@@ -1,7 +1,9 @@
 <%= link_to "Give/Take Points", new_point_path %>
 <div id="points-list">
   <% if @point_deltas.any? %>
-    <%= render @point_deltas %>
+    <% @point_deltas.each do |delta| %>
+      <%= render 'points/point_delta', :point_delta => delta %>
+    <% end %>
   <% else %>
     <p class="info">No one has any points yet.</p>
   <% end %>
