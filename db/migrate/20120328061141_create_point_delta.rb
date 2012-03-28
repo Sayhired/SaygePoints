@@ -1,6 +1,6 @@
 class CreatePointDelta < ActiveRecord::Migration
   def change
-    create_table :point_delta do |t|
+    create_table :point_deltas do |t|
       t.integer :amount
       t.text :reason
       t.integer :from_user_id

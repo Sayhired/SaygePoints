@@ -11,13 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328061141) do
+ActiveRecord::Schema.define(:version => 20120328063657) do
 
-  create_table "point_delta", :force => true do |t|
+  create_table "point_balances", :force => true do |t|
+    t.integer  "amount"
+    t.integer  "user_id"
+    t.integer  "point_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "point_deltas", :force => true do |t|
     t.integer  "amount"
     t.text     "reason"
     t.integer  "from_user_id"
     t.integer  "to_user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "point_type_id"
+  end
+
+  create_table "point_types", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

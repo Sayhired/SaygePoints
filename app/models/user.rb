@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
     :inverse_of => :from_user
   has_many :points_received, :class_name => 'PointDelta',
     :inverse_of => :to_user
+  has_many :point_balances
 end
