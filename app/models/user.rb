@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+  
+  has_many :points_given, :class_name => 'PointDelta',
+    :inverse_of => :from_user
+  has_many :points_received, :class_name => 'PointDelta',
+    :inverse_of => :to_user
 end
