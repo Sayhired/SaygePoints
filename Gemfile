@@ -7,6 +7,7 @@ gem 'rails', '3.1.1'
 
 gem 'pg'
 gem 'devise'
+gem 'annotate', '~> 2.4.1.beta'
 
 # Gems used only for assets and not required
 # in production environments by default.

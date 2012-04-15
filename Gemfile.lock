@@ -30,6 +30,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    annotate (2.4.1.beta1)
     ansi (1.4.2)
     arel (2.2.3)
     autotest (4.4.6)
@@ -166,6 +167,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest (= 4.5.0)
+  annotate (~> 2.4.1.beta)
   autotest (= 4.4.6)
   autotest-fsevent (= 0.2.4)
   autotest-growl (= 0.2.16)
