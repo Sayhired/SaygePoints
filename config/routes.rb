@@ -5,6 +5,7 @@ Saygepoints::Application.routes.draw do
   
   resources :points
   resources :point_types
+  resources :sayges, :only => [:index, :show]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
