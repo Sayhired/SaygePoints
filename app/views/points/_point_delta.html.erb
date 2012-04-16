@@ -1,4 +1,5 @@
 <div class="points">
   <%= point_delta.from_user.name %> gave <%= point_delta.to_user.name %>
-  <%= point_delta.amount %> points for <%= point_delta.reason %>
+  <%= point_delta.amount %> <%= point_delta.point_type.name %> points for
+  <%= point_delta.reason %>
 </div>
