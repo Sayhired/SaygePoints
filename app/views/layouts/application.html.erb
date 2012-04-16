@@ -9,9 +9,18 @@
 </head>
 
 <body>
+  <h1>SaygePoints</h1>
+  
+  <nav id="sections">
+    <ul>
+      <li><%= link_to "Points", root_path %></li>
+    </ul>
+  </nav>
+  
   <% flash.each do |key, val| %>
     <p class="flash <%= key %>"><%= val %></p>
   <% end %>
+  
   <%= yield %>
 </body>
 </html>
