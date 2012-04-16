@@ -47,5 +47,7 @@ module Saygepoints
     
     # For Devise on Heroku
     config.assets.initialize_on_precompile = false
+    
+    config.assets.precompile += %w( *.js *.css )
   end
 end
