@@ -1,13 +1,18 @@
 <div class="sayges">
   <% User.all.each do |user| %>
     <div class="sayge">
-      <p><%= user.name %> has:</p>
-      <ul>
-        <% user.point_balances.each do |point_balance| %>
-          <li><%= point_balance.amount %> <%= point_balance.point_type.name %>
-           Points</li>
-        <% end %>
-      </ul>
+      <p><%= user.name %>
+      <% if user.point_balances.any? %>
+        has</p>
+        <ul>
+          <% user.point_balances.each do |point_balance| %>
+            <li><%= point_balance.amount %>
+             <%= point_balance.point_type.name %> Points</li>
+          <% end %>
+        </ul>
+      <% else %>
+        doesn't have any points yet.
+      <% end %>
     </div>
   <% end %>
 </div>
