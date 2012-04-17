@@ -3,6 +3,10 @@ $(function () {
     $("#point_type").autocomplete({
       source: typeList, delay: 0, minLength: 0, autoFocus: true
     });
+
+    $("#point_type").focus(function () {
+      $(this).autocomplete("search", "");
+    });
   });
   
   $.get("/sayges", function (saygeList) {
