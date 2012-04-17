@@ -9,7 +9,7 @@ $(function () {
     });
   });
   
-  $.get("/sayges", function (saygeList) {
+  $.get("/sayges.json", function (saygeList) {
     $("#to_user").autocomplete({
       source: saygeList, delay: 0, autoFocus: true
     });
