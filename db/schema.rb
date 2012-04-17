@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328063657) do
+ActiveRecord::Schema.define(:version => 20120417063602) do
 
   create_table "point_balances", :force => true do |t|
-    t.integer  "amount"
+    t.integer  "amount",        :default => 0
     t.integer  "user_id"
     t.integer  "point_type_id"
     t.datetime "created_at"
